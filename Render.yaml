@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: telegram-reward-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: API_ID
+        value: "20919872"
+      - key: API_HASH
+        value: "cf09a978564be23bb4325372820876b2"
